@@ -11,8 +11,12 @@ public class ContaTerminal {
         System.out.println("Iremos criar uma conta para você é super simples e facil");
 
         //Entrada do nome do cliente
-        System.out.println("Por favor digite seu nome abaixo");
-        String nomeCliente = scanner.next();
+        System.out.println("Por favor, digite seu primeiro nome:");
+        String primeiroNome = scanner.next();
+        System.out.println("Agora, por favor, digite seu sobrenome:");
+        String segundoNome = scanner.next();
+
+        String nomeCliente = nomeCliente(primeiroNome, segundoNome);
 
         //Entrada do numero da agência do cliente
         System.out.println("Por favor digite o numero de sua agência");
@@ -29,5 +33,10 @@ public class ContaTerminal {
         System.out.println("Olá " + nomeCliente +" , obrigado por criar uma conta em nosso banco, sua agência é "
         + agencia + " , conta" + conta + " e seu saldo " + saldo + " já está disponível para saque."
         );
+    }
+
+    public static String nomeCliente (String primeiroNome, String segundoNome){
+
+               return primeiroNome.concat(" ").concat(segundoNome);
     }
 }
