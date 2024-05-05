@@ -16,6 +16,7 @@ public class ContaTerminal {
         System.out.println("Agora, por favor, digite seu sobrenome:");
         String segundoNome = scanner.next();
 
+        //Chamando o metodo nomeCliente
         String nomeCliente = nomeCliente(primeiroNome, segundoNome);
 
         //Entrada do numero da agência do cliente
@@ -35,6 +36,7 @@ public class ContaTerminal {
         );
     }
 
+    //Metodo para concatenar o nome e sobrenome do cliente
     public static String nomeCliente (String primeiroNome, String segundoNome){
 
                return primeiroNome.concat(" ").concat(segundoNome);
